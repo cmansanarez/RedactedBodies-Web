@@ -1,0 +1,23 @@
+{
+  "name": "redactedbodies-web",
+  "version": "1.0.0",
+  "description": "A personal NFT mint for an artist",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmansanarez/RedactedBodies-Web.git"
+  },
+  "author": "Cam Mansanarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmansanarez/RedactedBodies-Web/issues"
+  },
+  "homepage": "https://github.com/cmansanarez/RedactedBodies-Web#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
