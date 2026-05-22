@@ -132,3 +132,13 @@ button {
     color: var(--black);
 }
 
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-left: 0;
+    }
+}
