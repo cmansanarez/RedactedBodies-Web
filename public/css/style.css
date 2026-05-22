@@ -82,7 +82,3 @@ button {
   cursor: pointer;
 }
 
-div {
-  border: 1px solid var(--full-spectrum-blue);
-  padding: 20px;
-}
