@@ -94,3 +94,41 @@ button {
     display: flex;
     align-items: center;
 }
+.hero-content {
+    max-width: 600px;
+    padding-left: 1rem;
+}
+
+.hero-title {
+    font-size: 6rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.hero-tagline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid var(--neon-pink);
+    padding: 14px 36px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: var(--neon-pink);
+    color: var(--black);
+}
+
