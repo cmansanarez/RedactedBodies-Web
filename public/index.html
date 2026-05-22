@@ -28,20 +28,48 @@
     
     <body>  
 
+      <!-- HEADER: Sticky Nav Bar -->
       <header>
-        <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
-            <div class="container">    
-            <a class="navbar-brand" href="/">
-            <img src="./images/noirmak-logo-horizontal.png" alt="Noir Mak" height="40">
-            </a>  
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+
+        <!-- NAV: Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg py-1" data-bs-theme="dark">
+
+            <div class="container">
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="/">
+                    <img src="./images/noirmak-logo-horizontal.png" alt="Noir Mak" height="40">
+                </a>
+
+                <!-- TOGGLER: hamburger button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- ms-auto pushes the link list to the right side of the navbar -->
+                    <ul class="navbar-nav ms-auto">
+                       
+                        <li class="nav-item"><a class="nav-link" href="#featured">Featured Work</a></li>
+                       
+                        <li class="nav-item"><a class="nav-link" href="#archive">Projects</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#">Live Coding</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#">Shows</a></li>
+                       
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
 
             </div>
+
         </nav>
 
-    
       </header>
 
          <main>
