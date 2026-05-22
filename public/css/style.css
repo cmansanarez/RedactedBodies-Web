@@ -215,3 +215,58 @@ button {
     }
 }
 
+/* ARCHIVE */
+
+#archive {
+    padding: 100px 0;
+}
+
+.archive-title {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 3rem;
+    line-height: 1.1;
+}
+
+.project-card {
+    background-color: var(--black);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card .card-img {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.project-card .card-img-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 12px;
+}
+
+.project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0;
+}
+
+/* Border color variants — cycling through the palette */
+.card-accent-1 { border-color: var(--chartreuse); }
+.card-accent-2 { border-color: var(--neon-pink); }
+.card-accent-3 { border-color: var(--full-spectrum-blue); }
+.card-accent-4 { border-color: var(--sunbeam-yellow); }
+
+/* Hover: lift + matching glow per accent color */
+.card-accent-1:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(188, 248, 4, 0.4); }
+.card-accent-2:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(255, 29, 137, 0.4); }
+.card-accent-3:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(48, 79, 254, 0.4); }
+.card-accent-4:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(255, 236, 0, 0.4); }
+
