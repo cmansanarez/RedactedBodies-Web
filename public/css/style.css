@@ -177,3 +177,41 @@ button {
     margin-bottom: 2.5rem;
     max-width: 480px;
 }
+
+/* ABOUT */
+
+#about {
+    padding: 100px 0;
+}
+
+.about-card {
+    border: 1px solid var(--chartreuse);
+    padding: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.about-text:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .about-card {
+        padding: 30px;
+    }
+}
+
