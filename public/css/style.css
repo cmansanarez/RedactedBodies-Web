@@ -142,3 +142,15 @@ button {
         padding-left: 0;
     }
 }
+
+/* FEATURED */
+#featured {
+    padding: 100px 0;
+}
+
+.featured-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
