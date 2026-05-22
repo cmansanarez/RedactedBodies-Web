@@ -83,3 +83,14 @@ button {
   cursor: pointer;
 }
 
+/* HERO */
+#hero {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.2) 100%),
+        url('../images/redacted-bodies-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
