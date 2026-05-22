@@ -154,3 +154,26 @@ button {
     display: block;
 }
 
+.featured-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--chartreuse);
+    margin-bottom: 1rem;
+}
+
+#featured h2 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.featured-description {
+    font-size: 1.05rem;
+    color: var(--white);
+    opacity: 0.8;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
