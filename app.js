@@ -4,9 +4,9 @@ const port = 3000;
 
 app.use(express.static('public'));
 
-app.post('/mail', (req, res) => {
-  console.log("mail button clicked");
-});
+// app.post('/mail', (req, res) => {
+//   console.log("mail button clicked");
+//});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
