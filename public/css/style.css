@@ -196,7 +196,8 @@ button {
 }
 
 /* FEATURED */
-#featured {
+#featured,
+#nft-collection {
     padding: 100px 0;
 }
 
@@ -204,6 +205,16 @@ button {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.featured-img-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--chartreuse);
+    background-color: rgba(188, 248, 4, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .featured-label {
@@ -215,7 +226,8 @@ button {
     margin-bottom: 1rem;
 }
 
-#featured h2 {
+#featured h2,
+#nft-collection h2 {
     font-size: 3.5rem;
     color: var(--white);
     margin-bottom: 1.5rem;
@@ -228,6 +240,21 @@ button {
     opacity: 0.8;
     margin-bottom: 2.5rem;
     max-width: 480px;
+}
+
+/* COLLECTION PAGE */
+#collection-banner {
+    min-height: 80vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('../images/redacted-bodies-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
 }
 
 /* ABOUT */
