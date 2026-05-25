@@ -557,6 +557,44 @@ button.hero-btn {
     padding: 100px 0;
 }
 
+.shows-timeline {
+    position: relative;
+    padding-left: 90px;
+}
+
+.shows-timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2.25rem;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(188, 248, 4, 0.5) 0%, rgba(188, 248, 4, 0.06) 100%);
+}
+
+.shows-year-group {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.shows-year-heading {
+    position: absolute;
+    left: -90px;
+    top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.shows-year-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--chartreuse);
+    flex-shrink: 0;
+}
+
 .shows-entry {
     padding: 1.5rem 0;
 }
@@ -567,8 +605,6 @@ button.hero-btn {
     letter-spacing: 0.2em;
     color: var(--chartreuse);
     text-transform: uppercase;
-    display: block;
-    padding-top: 3px;
 }
 
 .shows-title {
@@ -609,6 +645,19 @@ button.hero-btn {
     border-color: rgba(245, 245, 245, 0.12);
     opacity: 1;
     margin: 0;
+}
+
+@media (max-width: 576px) {
+    .shows-timeline {
+        padding-left: 0;
+    }
+    .shows-timeline::before {
+        display: none;
+    }
+    .shows-year-heading {
+        position: static;
+        margin-bottom: 0.25rem;
+    }
 }
 
 /* FOOTER */
