@@ -50,6 +50,11 @@ nav,
 
 .navbar {
     border-bottom: 1px solid var(--neon-pink);
+    transition: background-color 0.4s ease;
+}
+
+.navbar-scrolled {
+    background-color: var(--black);
 }
 
 .nav-link,
