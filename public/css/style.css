@@ -413,6 +413,20 @@ button {
     color: var(--neon-pink);
 }
 
+/* FORM RESPONSE */
+
+.response-success,
+.response-failure {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.response-success { color: var(--chartreuse); }
+.response-failure { color: var(--neon-pink); }
+
 /* Override base button gradient so hero-btn works on <button> elements */
 button.hero-btn {
     background: transparent;
