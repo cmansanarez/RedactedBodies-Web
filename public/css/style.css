@@ -302,6 +302,23 @@ button {
 
 #live-coding {
     padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#hydra-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.45;
+}
+
+#live-coding .container {
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
@@ -356,8 +373,12 @@ button {
     height: 240px;
     object-fit: cover;
     display: block;
-    border: 1px solid rgba(245, 245, 245, 0.1);
+    border: 1px solid transparent;
 }
+
+.gallery-accent-blue .live-gallery-img  { border-color: var(--full-spectrum-blue); }
+.gallery-accent-yellow .live-gallery-img { border-color: var(--sunbeam-yellow); }
+.gallery-accent-green .live-gallery-img  { border-color: var(--chartreuse); }
 
 /* CONTACT */
 
