@@ -48,6 +48,19 @@ nav,
   letter-spacing: 0.03em;
 }
 
+.navbar {
+    border-bottom: 1px solid var(--neon-pink);
+}
+
+.nav-link,
+.nav-link.active {
+    color: var(--white) !important;
+}
+
+.nav-link:hover {
+    color: var(--chartreuse) !important;
+}
+
 /* BODY TEXT */
 
 p,
