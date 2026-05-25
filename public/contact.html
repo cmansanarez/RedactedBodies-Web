@@ -22,7 +22,8 @@
     </head>
     <body>  
         <div>Contact Information</div>
-            <form action="/mail" method="post">
+        <!-- CONTACT FORM -->
+            <!-- <form action="/mail" method="post">
             <p>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" />
@@ -38,7 +39,24 @@
             <p class="button">
                 <button id="contact-form-button" type="submit">Send your message</button>
             </p>
-            </form>
+            </form> -->
+
+        <form id="contact-form">
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button id="contact-form-button" type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
 
            <!-- SCRIPTS -->
