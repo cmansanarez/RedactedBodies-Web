@@ -417,23 +417,8 @@ button {
     margin-bottom: 2.5rem;
 }
 
-.video-placeholder {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
+.video-embed {
     border: 1px solid var(--neon-pink);
-    background-color: rgba(255, 29, 137, 0.03);
-}
-
-.video-placeholder-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .placeholder-label {
