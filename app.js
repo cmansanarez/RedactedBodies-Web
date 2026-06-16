@@ -7,8 +7,34 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
+app.set('view engine', 'ejs');
+
 app.use(express.json());
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+app.get('/collection', (req, res) => {
+    res.render('collection');
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contact');
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects');
+});
+
+app.get('/project', (req, res) => {
+    res.render('project');
+});
+
+app.get('/newProject', (req, res) => {
+    res.render('newProject');
+});
 
 app.post('/mail', async (req, res) => {
     try {
