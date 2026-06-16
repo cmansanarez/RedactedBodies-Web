@@ -657,6 +657,40 @@ button.hero-btn {
     }
 }
 
+/* PROJECTS PAGE */
+
+#projects-banner {
+    padding-top: 140px;
+    padding-bottom: 60px;
+}
+
+#projects-grid {
+    padding-bottom: 100px;
+}
+
+/* PROJECT DETAIL PAGE */
+
+#project-detail {
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.project-detail-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+/* ERROR PAGE */
+
+#error-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
 /* FOOTER */
 
 footer {

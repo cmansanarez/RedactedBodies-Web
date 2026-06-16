@@ -5,9 +5,9 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="/images/rb-favicon.png">
-        <title><%= project.name %> | Noir Mak</title>
+        <title>Error | Noir Mak</title>
         <meta name="author" content="Cam Mansanarez | Noir Mak">
-        <meta name="description" content="<%= project.name %> — a project by Noir Mak.">
+        <meta name="description" content="An error occurred.">
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,23 +27,12 @@
 
         <main>
 
-            <section id="project-detail">
+            <section id="error-page">
                 <div class="container">
-
-                    <p class="featured-label">Project <%= id %> of <%= id %></p>
-                    <h1 class="hero-title"><%= project.name %></h1>
-
-                    <div class="row mt-5">
-                        <div class="col-lg-8">
-                            <img src="/images/<%= project.image %>" alt="<%= project.name %>" class="featured-img">
-                        </div>
-                    </div>
-
-                    <div class="project-detail-actions">
-                        <a href="<%= project.url %>" class="hero-btn" target="_blank" rel="noopener noreferrer">Visit Project</a>
-                        <a href="/projects" class="hero-btn">Back to Archive</a>
-                    </div>
-
+                    <p class="featured-label">System Error</p>
+                    <h1 class="hero-title glitch-text">Signal Lost</h1>
+                    <p class="featured-description">Something went wrong on our end. The signal couldn't be routed.</p>
+                    <a href="/" class="hero-btn">Return Home</a>
                 </div>
             </section>
 
