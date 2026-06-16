@@ -682,6 +682,29 @@ button.hero-btn {
     margin-top: 2.5rem;
 }
 
+.project-detail-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--black);
+    background-color: var(--chartreuse);
+    padding: 4px 12px;
+}
+
 /* ERROR PAGE */
 
 #error-page {
