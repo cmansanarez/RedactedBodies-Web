@@ -80,106 +80,21 @@
                 <div class="container">
                     <p class="featured-label">Archive</p>
                     <h2 class="archive-title">The Archive</h2>
+                    <% const accents = ['card-accent-1', 'card-accent-2', 'card-accent-3', 'card-accent-4']; %>
                     <div class="row g-4">
 
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-1">
-                                <img src="./images/noirmak-visit-lumyn.jpg" class="card-img" alt="Lumyn: Constellation of Self">
+                        <% projectArray.forEach((item, index) => { %>
+                        <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= index * 0.08 %>s">
+                            <div class="card project-card <%= accents[index % 4] %>">
+                                <img src="/images/<%= item.image %>" class="card-img" alt="<%= item.name %>">
                                 <div class="card-img-overlay d-flex align-items-end">
                                     <h5 class="project-title">
-                                        <a href="https://visit-lumyn.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Lumyn: Constellation of Self</a>
+                                        <a href="/project/<%= item.id %>" class="stretched-link"><%= item.name %></a>
                                     </h5>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-2">
-                                <img src="./images/noirmak-orpheus.jpg" class="card-img" alt="GLITCH.EXE: Orpheus Protocol">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://orpheus.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">GLITCH.EXE: Orpheus Protocol</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-3">
-                                <img src="./images/noirmak-still-becoming.jpg" class="card-img" alt="stillbecoming">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://stillbecoming.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">stillbecoming</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-4">
-                                <img src="./images/noirmak-undertones.jpg" class="card-img" alt="Undertones">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://undertones.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Undertones</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-1">
-                                <img src="./images/noirmak-between-states.jpg" class="card-img" alt="Between States">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://between-states-pitch-deck.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Between States</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-2">
-                                <img src="./images/noirmak-noise-palette.jpg" class="card-img" alt="Noise Palette">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://noise-palette.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Noise Palette</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-3">
-                                <img src="./images/noirmak-atmos-index.jpg" class="card-img" alt="Atmos Index">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://atmosindex.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Atmos Index</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-4">
-                                <img src="./images/noirmak-web-stitched-in-code.jpg" class="card-img" alt="Stitched in Code">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://stitchedincode.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Stitched in Code</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card card-accent-1">
-                                <img src="./images/noirmak-lumyn-web.jpg" class="card-img" alt="Lumyn">
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="project-title">
-                                        <a href="https://lumyn.noirmak.com/" class="stretched-link" target="_blank" rel="noopener noreferrer">Lumyn</a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
+                        <% }) %>
 
                     </div><!-- END ROW -->
                 </div><!-- END CONTAINER -->

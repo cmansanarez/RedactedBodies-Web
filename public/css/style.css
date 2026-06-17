@@ -382,11 +382,32 @@ button {
 .card-accent-3 { border-color: var(--full-spectrum-blue); }
 .card-accent-4 { border-color: var(--sunbeam-yellow); }
 
-/* Hover: lift + matching glow per accent color */
-.card-accent-1:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(188, 248, 4, 0.4); }
-.card-accent-2:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(255, 29, 137, 0.4); }
-.card-accent-3:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(48, 79, 254, 0.4); }
-.card-accent-4:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(255, 236, 0, 0.4); }
+/* Hover: lift + neon pulse cycling through brand palette */
+.card-accent-1:hover,
+.card-accent-2:hover,
+.card-accent-3:hover,
+.card-accent-4:hover { transform: translateY(-6px); animation: neon-pulse 2s ease-in-out infinite; }
+
+/* Entrance: stagger delay set via --card-delay CSS variable on the wrapper */
+.project-card-wrapper {
+    animation: card-glitch-in 0.45s ease-out both;
+    animation-delay: var(--card-delay, 0s);
+}
+
+@keyframes card-glitch-in {
+    0%   { opacity: 0; transform: translateX(-8px); filter: saturate(2) hue-rotate(20deg) blur(1px); }
+    20%  { opacity: 1; transform: translateX(5px);  filter: saturate(3) hue-rotate(-15deg); }
+    45%  { transform: translateX(-3px); filter: saturate(1.5) hue-rotate(8deg); }
+    70%  { transform: translateX(1px);  filter: none; }
+    100% { opacity: 1; transform: translateX(0);    filter: none; }
+}
+
+@keyframes neon-pulse {
+    0%,  100% { box-shadow: 0 0 12px rgba(255, 29, 137, 0.9),  0 0 30px rgba(255, 29, 137, 0.4); }
+    25%        { box-shadow: 0 0 12px rgba(48, 79, 254, 0.9),   0 0 30px rgba(48, 79, 254, 0.4); }
+    50%        { box-shadow: 0 0 12px rgba(188, 248, 4, 0.9),   0 0 30px rgba(188, 248, 4, 0.4); }
+    75%        { box-shadow: 0 0 12px rgba(255, 236, 0, 0.9),   0 0 30px rgba(255, 236, 0, 0.4); }
+}
 
 /* LIVE CODING */
 

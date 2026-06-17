@@ -13,8 +13,9 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('index');
+app.get('/', async (req, res) => {
+    const projectArray = await db.getAllProjects();
+    res.render('index', { projectArray });
 });
 
 app.get('/collection', (req, res) => {

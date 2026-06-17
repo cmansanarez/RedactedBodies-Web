@@ -19,16 +19,15 @@ export async function connect() {
 
 export async function getAllProjects() {
     const [rows] = await pool.query({
-        sql: 'SELECT id, project_name AS name, img_url AS image, project_description AS description FROM projects;'
+        sql: 'SELECT id, project_name AS name, img_url AS image, project_description AS description, url, tags FROM projects;'
     });
-    return rows.map(row => ({ ...row, url: '#', tags: [] }));
+    return rows;
 }
 
 export async function getProjectById(id) {
     const [rows] = await pool.query({
-        sql: 'SELECT id, project_name AS name, img_url AS image, project_description AS description FROM projects WHERE id = ?;',
+        sql: 'SELECT id, project_name AS name, img_url AS image, project_description AS description, url, tags FROM projects WHERE id = ?;',
         values: [id]
     });
-    if (!rows[0]) return null;
-    return { ...rows[0], url: '#', tags: [] };
+    return rows[0] || null;
 }
