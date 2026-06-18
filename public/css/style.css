@@ -206,6 +206,12 @@ button {
     width: 100%;
     height: auto;
     display: block;
+    box-shadow: 0 0 12px rgba(255, 29, 137, 0.9), 0 0 30px rgba(255, 29, 137, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+.featured-img:hover {
+    animation: neon-pulse 2s ease-in-out infinite;
 }
 
 .featured-img-placeholder {
