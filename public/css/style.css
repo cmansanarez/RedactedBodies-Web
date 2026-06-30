@@ -112,6 +112,38 @@ button {
     cursor: pointer;
 }
 
+/* WALLET */
+
+.wallet-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--neon-pink);
+    background: transparent;
+    border: 1px solid var(--neon-pink);
+    padding: 6px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-left: 1.5rem;
+    white-space: nowrap;
+}
+
+.wallet-btn:hover {
+    background-color: var(--neon-pink);
+    color: var(--black);
+}
+
+.wallet-btn.wallet-connected {
+    color: var(--chartreuse);
+    border-color: var(--chartreuse);
+}
+
+.wallet-btn.wallet-connected:hover {
+    background-color: var(--chartreuse);
+    color: var(--black);
+}
+
 /* HERO */
 #hero {
     min-height: 100vh;

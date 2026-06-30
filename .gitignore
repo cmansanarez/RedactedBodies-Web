@@ -1,5 +1,6 @@
 .env
 node_modules/
+dump.sql
 .vscode
 /scratch.txt
 CLAUDE.md
