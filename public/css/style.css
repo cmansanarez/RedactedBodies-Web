@@ -1,31 +1,31 @@
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 /*==TYPOGRAPHY SYSTEM==*/
 
 :root {
-  --full-spectrum-blue: #304ffeff;
-  --neon-pink: #ff1d89ff;
-  --sunbeam-yellow: #ffec00ff;
-  --chartreuse: #bcf804ff;
-  --black: #000000;
-  --white: #f5f5f5;
+    --full-spectrum-blue: #304ffe;
+    --neon-pink: #ff1d89;
+    --sunbeam-yellow: #ffec00;
+    --chartreuse: #bcf804;
+    --black: #000000;
+    --white: #f5f5f5;
 }
 
 /* GLOBAL STYLES */
 
 body {
-  background-color: var(--black);
-  color: var(--white);
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
 
 /* HERO HEADLINES */
@@ -33,19 +33,19 @@ body {
 h1,
 h2,
 .hero-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 /* NAVIGATION */
 
 nav,
 .nav-link {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.03em;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
 }
 
 .navbar {
@@ -89,9 +89,9 @@ nav,
 
 p,
 .body-text {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 /* METADATA / HASHES */
@@ -100,24 +100,16 @@ p,
 .hash,
 .token-id,
 .code {
-  font-family: 'Space Mono', monospace;
-  font-weight: 400;
-  color: var(--chartreuse);
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    color: var(--chartreuse);
 }
 
-/* OPTIONAL EXAMPLE BUTTON */
+/* BUTTONS */
 
 button {
-  font-family: 'Space Grotesk', sans-serif;
-  background: linear-gradient(
-    90deg,
-    var(--neon-pink),
-    var(--full-spectrum-blue)
-  );
-  color: var(--white);
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
 }
 
 /* HERO */
@@ -193,7 +185,6 @@ button {
         max-width: 100%;
         padding-left: 0;
     }
-
 }
 
 /* FEATURED */
@@ -212,16 +203,6 @@ button {
 
 .featured-img:hover {
     animation: neon-pulse 2s ease-in-out infinite;
-}
-
-.featured-img-placeholder {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    border: 1px solid var(--chartreuse);
-    background-color: rgba(188, 248, 4, 0.03);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .featured-label {
@@ -381,7 +362,6 @@ button {
     color: var(--white);
 }
 
-
 /* Border color variants — cycling through the palette */
 .card-accent-1 { border-color: var(--chartreuse); }
 .card-accent-2 { border-color: var(--neon-pink); }
@@ -458,16 +438,6 @@ button {
 
 .video-embed {
     border: 1px solid var(--neon-pink);
-}
-
-.placeholder-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--neon-pink);
-    opacity: 0.5;
-    margin: 0;
 }
 
 .live-gallery-img {
@@ -555,7 +525,7 @@ button {
 .response-success { color: var(--chartreuse); }
 .response-failure { color: var(--neon-pink); }
 
-/* Override base button gradient so hero-btn works on <button> elements */
+/* Browser-default button background overrides hero-btn border style without this */
 button.hero-btn {
     background: transparent;
 }
@@ -822,4 +792,3 @@ footer {
     opacity: 1;
     color: var(--white);
 }
-
