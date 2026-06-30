@@ -30,6 +30,7 @@ app.get('/', async (req, res) => {
     try {
         projectArray = await db.getAllProjects();
     } catch (e) {
+        console.error('DB query failed, using fallback:', e.message);
         projectArray = FALLBACK_PROJECTS;
     }
     res.render('index', { projectArray });
@@ -48,6 +49,7 @@ app.get('/projects', async (req, res) => {
     try {
         projectArray = await db.getAllProjects();
     } catch (e) {
+        console.error('DB query failed, using fallback:', e.message);
         projectArray = FALLBACK_PROJECTS;
     }
     res.render('projects', { projectArray });
@@ -62,6 +64,7 @@ app.get('/project/:id', async (req, res) => {
     try {
         project = await db.getProjectById(id);
     } catch (e) {
+        console.error('DB query failed, using fallback:', e.message);
         project = FALLBACK_PROJECTS.find(p => p.id === id) || null;
     }
     if (!project) {
@@ -92,7 +95,7 @@ app.use((err, req, res, next) => {
 try {
     await db.connect();
 } catch (e) {
-    console.warn('Database unavailable — running on fallback data.');
+    console.warn('Database unavailable — running on fallback data:', e.message);
 }
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
