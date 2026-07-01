@@ -144,6 +144,14 @@ button {
     color: var(--black);
 }
 
+@media (max-width: 991.98px) {
+    .wallet-btn {
+        margin-left: 0;
+        margin-top: 0.75rem;
+        width: 100%;
+    }
+}
+
 /* HERO */
 #hero {
     min-height: 100vh;

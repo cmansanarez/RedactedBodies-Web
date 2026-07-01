@@ -23,7 +23,7 @@
                         <% projectArray.forEach((item, index) => { %>
                             <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= index * 0.08 %>s">
                                 <div class="card project-card <%= accents[index % 4] %>">
-                                    <img src="/images/<%= item.image %>" class="card-img" alt="<%= item.name %>">
+                                    <img src="/images/<%= item.image %>" class="card-img" alt="<%= item.name %>" width="800" height="560">
                                     <div class="card-img-overlay d-flex align-items-end">
                                         <h5 class="project-title">
                                             <a href="/project/<%= item.id %>" class="stretched-link"><%= item.name %></a>
