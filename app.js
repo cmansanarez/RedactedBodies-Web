@@ -8,6 +8,17 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
+const FEATURED_PROJECT_ID = parseInt(process.env.FEATURED_PROJECT_ID) || 10;
+
+const FALLBACK_FEATURED = {
+    id: 10,
+    name: 'Signal Bloom',
+    image: 'signal-bloom-modulate-logo.png',
+    description: 'A modular AI-assisted live visual performance environment merging Hydra live coding, generative AI imagery via ComfyUI, and audio-reactive systems into a unified performance instrument. The project investigates what happens when AI generation itself becomes performative — treating image creation not as a pre-authored asset, but as an event that unfolds in real time through improvisation between human and machine.',
+    url: 'https://signal-bloom.noirmak.com',
+    tags: ['Live Coding', 'Generative Art', 'AI-Assisted', 'Audio Reactive', 'Hydra', 'ComfyUI', 'Performance']
+};
+
 const FALLBACK_PROJECTS = [
     { id: 1, name: 'Lumyn: Constellation of Self', image: 'noirmak-visit-lumyn.jpg', description: 'An interactive installation that transforms participant reflections into generative poetry, color, and constellation-inspired visual compositions. Using ml5.js-powered motion tracking via webcam, the installation responds to the physical movements of gallery attendees in real time, weaving their presence directly into the generative output. Through AI, creative coding, and projection, Lumyn creates a collective archive of identity, affirmation, and belonging.', url: 'https://visit-lumyn.noirmak.com/', tags: ['Interactive', 'Installation', 'Experiential', 'Generative Art', 'ml5.js', 'Node.js', 'Express.js', 'Three.js', 'AI-Assisted', 'Projection'] },
     { id: 2, name: 'GLITCH.EXE: Orpheus Protocol', image: 'noirmak-orpheus.jpg', description: 'An experimental web-based artwork reimagining the myth of Orpheus and Eurydice through the lens of digital memory, machine perception, and generative systems. Participants navigate a fragmented computational landscape where text, image, and interaction become unstable artifacts of loss, desire, and retrieval. Drawing from glitch aesthetics, audio-reactive visuals, and speculative storytelling, the project explores what remains when memory is translated into code.', url: 'https://orpheus.noirmak.com/', tags: ['Interactive', 'Web Experience', 'Generative Art', 'JavaScript', 'Node.js', 'Hydra Video Synth', 'HTML/CSS'] },
@@ -27,13 +38,19 @@ app.use(express.static('public'));
 
 app.get('/', async (req, res) => {
     let projectArray;
+    let featuredProject;
     try {
-        projectArray = await db.getAllProjects();
+        [projectArray, featuredProject] = await Promise.all([
+            db.getAllProjects(),
+            db.getProjectById(FEATURED_PROJECT_ID)
+        ]);
+        if (!featuredProject) featuredProject = FALLBACK_FEATURED;
     } catch (e) {
         console.error('DB query failed, using fallback:', e.message);
         projectArray = FALLBACK_PROJECTS;
+        featuredProject = FALLBACK_FEATURED;
     }
-    res.render('index', { projectArray });
+    res.render('index', { projectArray, featuredProject });
 });
 
 app.get('/collection', (req, res) => {
