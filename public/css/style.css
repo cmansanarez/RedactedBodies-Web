@@ -184,6 +184,7 @@ button {
 .hero-logo {
     max-width: 420px;
     width: 80%;
+    height: auto;
     display: block;
     margin: 0 auto 1.5rem;
 }
