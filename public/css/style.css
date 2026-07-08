@@ -205,6 +205,12 @@ button {
     }
 }
 
+@media (max-width: 480px) {
+    #collection-banner .hero-title {
+        font-size: 2rem;
+    }
+}
+
 /* FEATURED */
 #featured,
 #redacted-bodies {
@@ -258,7 +264,11 @@ button {
 /* COLLECTION PAGE */
 #collection-banner {
     min-height: 80vh;
-    background: radial-gradient(circle at center, #1a0a14 0%, var(--black) 70%);
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('../images/redacted-bodies-hero.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
