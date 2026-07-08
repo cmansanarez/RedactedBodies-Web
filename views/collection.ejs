@@ -31,11 +31,21 @@
 
             <!-- GALLERY -->
             <section id="collection-gallery">
-                <div class="container text-center">
-                    <p class="featured-label">Generated Work</p>
-                    <h2 class="section-title">Gallery</h2>
-                    <img src="/images/placeholder.png" alt="Redacted Bodies gallery placeholder — generated artwork coming soon" class="featured-img mb-3" width="800" height="800">
-                    <p class="about-text">The full gallery of generated artwork is in progress and will be added here as pieces are finalized.</p>
+                <div class="container">
+                    <p class="featured-label text-center">Generated Work</p>
+                    <h2 class="section-title text-center">Gallery</h2>
+                    <div class="row g-4 mt-2">
+                        <% const galleryAccents = ['card-accent-1', 'card-accent-2', 'card-accent-3', 'card-accent-4']; %>
+                        <% const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']; %>
+                        <% for (let i = 1; i <= 9; i++) { %>
+                        <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= (i - 1) * 0.08 %>s">
+                            <div class="project-card gallery-card <%= galleryAccents[(i - 1) % 4] %>">
+                                <img src="/images/redacted-bodies-gen-<%= String(i).padStart(2, '0') %>.png" alt="Redacted Bodies — generated piece <%= numerals[i - 1] %>" class="gallery-img" width="512" height="512" loading="lazy">
+                                <p class="gallery-caption">Redacted Bodies — <%= numerals[i - 1] %></p>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
                 </div>
             </section><!-- END GALLERY -->
 

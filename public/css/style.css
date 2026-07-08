@@ -398,6 +398,30 @@ button {
 .card-accent-3:hover,
 .card-accent-4:hover { transform: translateY(-6px); animation: neon-pulse 2s ease-in-out infinite; }
 
+/* GALLERY CARDS — Redacted Bodies generated works (static, not links) */
+.gallery-card {
+    cursor: default;
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.gallery-caption {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+}
+
 /* Entrance: stagger delay set via --card-delay CSS variable on the wrapper */
 .project-card-wrapper {
     animation: card-glitch-in 0.45s ease-out both;
