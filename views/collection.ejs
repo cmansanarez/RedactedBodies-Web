@@ -36,8 +36,8 @@
                     <h2 class="section-title text-center">Gallery</h2>
                     <div class="row g-4 mt-2">
                         <% const galleryAccents = ['card-accent-1', 'card-accent-2', 'card-accent-3', 'card-accent-4']; %>
-                        <% const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']; %>
-                        <% for (let i = 1; i <= 9; i++) { %>
+                        <% const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']; %>
+                        <% for (let i = 1; i <= 12; i++) { %>
                         <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= (i - 1) * 0.08 %>s">
                             <div class="project-card gallery-card <%= galleryAccents[(i - 1) % 4] %>">
                                 <img src="/images/redacted-bodies-gen-<%= String(i).padStart(2, '0') %>.png" alt="Redacted Bodies — generated piece <%= numerals[i - 1] %>" class="gallery-img" width="512" height="512" loading="lazy">
