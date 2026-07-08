@@ -1,7 +1,7 @@
 {
   "name": "redactedbodies-web",
   "version": "1.0.0",
-  "description": "A personal NFT mint for an artist",
+  "description": "Portfolio and generative art site for Cam Mansanarez (Noir Mak)",
   "type": "module",
   "main": "app.js",
   "scripts": {

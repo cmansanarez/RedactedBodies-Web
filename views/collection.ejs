@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <%- include('head', { title: 'Redacted Bodies Collection | Noir Mak', description: 'Redacted Bodies — a generative NFT collection by Noir Mak exploring queer identity, censorship, and digital permanence. Coming soon.' }) %>
+    <%- include('head', { title: 'Redacted Bodies | Noir Mak', description: 'Redacted Bodies — a generative art project by Noir Mak exploring queer identity, censorship, surveillance, and digital embodiment through a custom LoRA model trained on FLUX.' }) %>
 
     <body>
 
@@ -11,11 +11,33 @@
             <!-- COLLECTION BANNER -->
             <section id="collection-banner">
                 <div class="container">
-                    <p class="featured-label">NFT Collection</p>
-                    <h1 class="hero-title">Coming Soon</h1>
-                    <p class="hero-tagline">Redacted Bodies — a generative NFT collection by Noir Mak</p>
+                    <p class="featured-label">Generative Art</p>
+                    <h1 class="hero-title">Redacted Bodies</h1>
+                    <p class="hero-tagline">A custom-trained LoRA model exploring queer identity, censorship, surveillance, and digital embodiment</p>
                 </div>
             </section><!-- END COLLECTION BANNER -->
+
+            <!-- PROCESS -->
+            <section id="collection-process">
+                <div class="container">
+                    <div class="about-card">
+                        <p class="featured-label">The Process</p>
+                        <h2>Building the Model</h2>
+                        <p class="about-text">Redacted Bodies is built around a custom LoRA (Low-Rank Adaptation) model, trained on top of FLUX and developed in ComfyUI. Rather than hand-drawing or photographing each piece, the imagery emerges from a model fine-tuned on a hand-curated dataset — every image in that dataset chosen deliberately to carry the project's themes of visibility, redaction, and the body under surveillance.</p>
+                        <p class="about-text">The dataset design and prompt engineering are as much the artwork as the generated output: what gets shown, what gets withheld, and what the model learns to associate with "redaction" are all authorial choices. The result is a generative pipeline that produces new, unrepeatable variations while staying tethered to a consistent visual and conceptual language.</p>
+                    </div>
+                </div>
+            </section><!-- END PROCESS -->
+
+            <!-- GALLERY -->
+            <section id="collection-gallery">
+                <div class="container text-center">
+                    <p class="featured-label">Generated Work</p>
+                    <h2 class="section-title">Gallery</h2>
+                    <img src="/images/placeholder.png" alt="Redacted Bodies gallery placeholder — generated artwork coming soon" class="featured-img mb-3" width="800" height="800">
+                    <p class="about-text">The full gallery of generated artwork is in progress and will be added here as pieces are finalized.</p>
+                </div>
+            </section><!-- END GALLERY -->
 
         </main><!-- END MAIN -->
 

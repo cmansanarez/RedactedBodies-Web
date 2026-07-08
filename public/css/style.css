@@ -97,8 +97,6 @@ p,
 /* METADATA / HASHES */
 
 .metadata,
-.hash,
-.token-id,
 .code {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
@@ -110,46 +108,6 @@ p,
 button {
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
-}
-
-/* WALLET */
-
-.wallet-btn {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--neon-pink);
-    background: transparent;
-    border: 1px solid var(--neon-pink);
-    padding: 6px 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    margin-left: 1.5rem;
-    white-space: nowrap;
-}
-
-.wallet-btn:hover {
-    background-color: var(--neon-pink);
-    color: var(--black);
-}
-
-.wallet-btn.wallet-connected {
-    color: var(--chartreuse);
-    border-color: var(--chartreuse);
-}
-
-.wallet-btn.wallet-connected:hover {
-    background-color: var(--chartreuse);
-    color: var(--black);
-}
-
-@media (max-width: 991.98px) {
-    .wallet-btn {
-        margin-left: 0;
-        margin-top: 0.75rem;
-        width: 100%;
-    }
 }
 
 /* FEATURED LOGO — transparent PNG, neon drop-shadow treatment */
@@ -249,7 +207,7 @@ button {
 
 /* FEATURED */
 #featured,
-#nft-collection {
+#redacted-bodies {
     padding: 100px 0;
 }
 
@@ -275,7 +233,7 @@ button {
 }
 
 #featured h2,
-#nft-collection h2 {
+#redacted-bodies h2 {
     font-size: 3.5rem;
     color: var(--white);
     margin-bottom: 1.5rem;
@@ -284,7 +242,7 @@ button {
 
 @media (max-width: 768px) {
     #featured h2,
-    #nft-collection h2 {
+    #redacted-bodies h2 {
         font-size: 2.2rem;
     }
 }
@@ -300,16 +258,22 @@ button {
 /* COLLECTION PAGE */
 #collection-banner {
     min-height: 80vh;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-        url('../images/redacted-bodies-hero.png');
-    background-size: cover;
-    background-position: center;
+    background: radial-gradient(circle at center, #1a0a14 0%, var(--black) 70%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 80px;
+}
+
+#collection-process,
+#collection-gallery {
+    padding: 100px 0;
+}
+
+#collection-gallery .featured-img {
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 /* ABOUT */

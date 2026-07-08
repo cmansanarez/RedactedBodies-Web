@@ -1,7 +1,7 @@
 # RedactedBodies-Web
-This is a Web3 Project created for MACT 6340 by Cam Mansanarez | @noir_mak
+This is a creative technologist portfolio project created for CRCP6340 by Cam Mansanarez | @noir_mak
 
-Redacted Bodies is a generative NFT art collection exploring queer identity, censorship, digital corruption, and synthetic memory through AI-generated imagery, glitch aesthetics, and blockchain-based preservation.
+Redacted Bodies is a generative art project exploring queer identity, censorship, surveillance, and digital embodiment through a custom LoRA model — trained on FLUX in ComfyUI on a hand-curated dataset — alongside glitch aesthetics and generative code.
 
 ## Deployment
 
