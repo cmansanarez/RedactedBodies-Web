@@ -11,6 +11,6 @@ Render hosts the Node.js app. Cloudflare points the domain to Render's provided 
 
 ## Licensing
 
-Code is licensed under the MIT License unless otherwise stated.
+Code is licensed under the MIT License unless otherwise stated. Find additional licensing information here: https://github.com/cmansanarez/RedactedBodies-Web/blob/main/LICENSE.txt
 
 All artwork, visual assets, generative outputs, branding, and creative materials remain © 2026 Cameron Mansanarez / noir_mak. All Rights Reserved.
