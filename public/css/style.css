@@ -277,13 +277,72 @@ button {
 }
 
 #collection-process,
+#collection-pipeline,
+#collection-ethics,
 #collection-gallery {
     padding: 100px 0;
+}
+
+#collection-ethics {
+    padding-top: 0;
 }
 
 #collection-gallery .featured-img {
     max-width: 480px;
     margin: 0 auto;
+}
+
+/* PIPELINE STEPS */
+.pipeline-step {
+    height: 100%;
+    padding: 32px 24px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: var(--black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pipeline-step-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    opacity: 0.5;
+    margin-bottom: 0.75rem;
+}
+
+.pipeline-step-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+
+.pipeline-step-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* ETHICS STATEMENT */
+.ethics-card {
+    border-color: var(--neon-pink);
+}
+
+/* GALLERY PROMPT METADATA */
+.gallery-prompt {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: var(--white);
+    opacity: 0.55;
+    text-align: left;
+    padding: 0 16px 16px;
+    margin: auto 0 0;
 }
 
 /* ABOUT */
@@ -411,6 +470,9 @@ button {
 /* GALLERY CARDS — Redacted Bodies generated works (static, not links) */
 .gallery-card {
     cursor: default;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .gallery-img {
@@ -434,6 +496,8 @@ button {
 
 /* Entrance: stagger delay set via --card-delay CSS variable on the wrapper */
 .project-card-wrapper {
+    display: flex;
+    flex-direction: column;
     animation: card-glitch-in 0.45s ease-out both;
     animation-delay: var(--card-delay, 0s);
 }

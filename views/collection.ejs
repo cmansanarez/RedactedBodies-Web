@@ -17,17 +17,71 @@
                 </div>
             </section><!-- END COLLECTION BANNER -->
 
-            <!-- PROCESS -->
+            <!-- THE MODEL -->
             <section id="collection-process">
                 <div class="container">
                     <div class="about-card">
-                        <p class="featured-label">The Process</p>
-                        <h2>Building the Model</h2>
-                        <p class="about-text">Redacted Bodies is built around a custom LoRA (Low-Rank Adaptation) model, trained on top of FLUX and developed in ComfyUI. Rather than hand-drawing or photographing each piece, the imagery emerges from a model fine-tuned on a hand-curated dataset — every image in that dataset chosen deliberately to carry the project's themes of visibility, redaction, and the body under surveillance.</p>
+                        <p class="featured-label">The Model</p>
+                        <h2>NoirmakStyle</h2>
+                        <p class="about-text">Redacted Bodies is built around <strong>NoirmakStyle</strong>, a custom LoRA (Low-Rank Adaptation) model trained on top of FLUX and developed in ComfyUI. Rather than hand-drawing or photographing each piece, the imagery emerges from a model fine-tuned on a hand-curated dataset — every image in that dataset chosen deliberately to carry the project's themes of visibility, redaction, and the body under surveillance.</p>
+                        <p class="about-text">NoirmakStyle is the same model that drives real-time image generation inside <a href="https://signal-bloom.noirmak.com" target="_blank" rel="noopener noreferrer">Signal Bloom</a>, Noir Mak's live-coded, AI-assisted performance system. One trained visual language, two bodies of work — here, redirected through prompt engineering toward censorship, surveillance, and the body reduced to data instead of Signal Bloom's mythology of signal and bloom.</p>
                         <p class="about-text">The dataset design and prompt engineering are as much the artwork as the generated output: what gets shown, what gets withheld, and what the model learns to associate with "redaction" are all authorial choices. The result is a generative pipeline that produces new, unrepeatable variations while staying tethered to a consistent visual and conceptual language.</p>
                     </div>
                 </div>
-            </section><!-- END PROCESS -->
+            </section><!-- END THE MODEL -->
+
+            <!-- PIPELINE -->
+            <section id="collection-pipeline">
+                <div class="container">
+                    <p class="featured-label text-center">How the Work Is Made</p>
+                    <h2 class="section-title text-center">The Pipeline</h2>
+                    <div class="row g-4 mt-2">
+
+                        <div class="col-lg-3 col-md-6 project-card-wrapper" style="--card-delay: 0s">
+                            <div class="pipeline-step card-accent-1">
+                                <p class="pipeline-step-number">01</p>
+                                <h3 class="pipeline-step-title">Dataset Curation</h3>
+                                <p class="pipeline-step-text">Every training image was hand-selected and captioned, chosen for how it carried the project's themes: visibility, redaction, the body under surveillance.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 project-card-wrapper" style="--card-delay: 0.08s">
+                            <div class="pipeline-step card-accent-2">
+                                <p class="pipeline-step-number">02</p>
+                                <h3 class="pipeline-step-title">Training</h3>
+                                <p class="pipeline-step-text">The curated dataset fine-tuned FLUX via LoRA in ComfyUI, teaching the model a consistent visual vocabulary — chromatic bloom, glitch and datamosh artifacts, signal corruption.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 project-card-wrapper" style="--card-delay: 0.16s">
+                            <div class="pipeline-step card-accent-3">
+                                <p class="pipeline-step-number">03</p>
+                                <h3 class="pipeline-step-title">Prompt Engineering</h3>
+                                <p class="pipeline-step-text">The trained model is directed, not simply triggered. Prompt language becomes an authorial act — indexing identity as machine archive, portraits hidden beneath algorithmic masking.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 project-card-wrapper" style="--card-delay: 0.24s">
+                            <div class="pipeline-step card-accent-4">
+                                <p class="pipeline-step-number">04</p>
+                                <h3 class="pipeline-step-title">Inference &amp; Curation</h3>
+                                <p class="pipeline-step-text">Generation produces variation, not a single fixed image. Selecting what enters the gallery — and what's discarded — is where the artist's hand returns.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section><!-- END PIPELINE -->
+
+            <!-- ETHICS STATEMENT -->
+            <section id="collection-ethics">
+                <div class="container">
+                    <div class="about-card ethics-card">
+                        <p class="featured-label">A Note on What You're Seeing</p>
+                        <p class="about-text">Every image in the gallery below is a generated output of the trained model — never a photograph, never a training image presented as if it were finished work. Redacted Bodies is a project about consent, representation, and what happens when bodies become datasets; the distinction between training material and generated art isn't incidental to that argument, it's part of it. Nothing shown here depicts a real person.</p>
+                    </div>
+                </div>
+            </section><!-- END ETHICS STATEMENT -->
 
             <!-- GALLERY -->
             <section id="collection-gallery">
@@ -36,15 +90,15 @@
                     <h2 class="section-title text-center">Gallery</h2>
                     <div class="row g-4 mt-2">
                         <% const galleryAccents = ['card-accent-1', 'card-accent-2', 'card-accent-3', 'card-accent-4']; %>
-                        <% const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']; %>
-                        <% for (let i = 1; i <= 12; i++) { %>
-                        <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= (i - 1) * 0.08 %>s">
-                            <div class="project-card gallery-card <%= galleryAccents[(i - 1) % 4] %>">
-                                <img src="/images/redacted-bodies-gen-<%= String(i).padStart(2, '0') %>.png" alt="Redacted Bodies — generated piece <%= numerals[i - 1] %>" class="gallery-img" width="512" height="512" loading="lazy">
-                                <p class="gallery-caption">Redacted Bodies — <%= numerals[i - 1] %></p>
+                        <% gallery.forEach((piece, index) => { %>
+                        <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= index * 0.08 %>s">
+                            <div class="project-card gallery-card <%= galleryAccents[index % 4] %>">
+                                <img src="/images/<%= piece.image %>" alt="Redacted Bodies — generated piece <%= piece.numeral %>" class="gallery-img" width="512" height="512" loading="lazy">
+                                <p class="gallery-caption">Redacted Bodies — <%= piece.numeral %></p>
+                                <p class="gallery-prompt"><%= piece.prompt %></p>
                             </div>
                         </div>
-                        <% } %>
+                        <% }) %>
                     </div>
                 </div>
             </section><!-- END GALLERY -->

@@ -31,6 +31,21 @@ const FALLBACK_PROJECTS = [
     { id: 9, name: 'Lumyn', image: 'noirmak-lumyn-web.jpg', description: 'A web-based generative art platform that uses a fine-tuned language model to create personalized poetry and color metaphors from participant responses celebrating identity, resilience, and inner beauty. The project explores the intersection of AI, creative coding, and interactive storytelling as tools for reflection and emotional connection.', url: 'https://lumyn.noirmak.com/', tags: ['Generative AI', 'Interactive', 'Digital Poetry', 'Creative Technology', 'Web Experience', 'JavaScript', 'Node.js', 'Express.js', 'LLM Integration'] }
 ];
 
+const REDACTED_BODIES_GALLERY = [
+    { id: 1, numeral: 'I', image: 'redacted-bodies-gen-01.png', prompt: 'NoirmakStyle, digital artwork featuring two luminous classical marble figures surrounded by abstract botanical forms, vibrant cyan and magenta atmosphere, surreal composition, glowing signal traces, textured digital painting, harmonious symmetry, rule of thirds' },
+    { id: 2, numeral: 'II', image: 'redacted-bodies-gen-02.png', prompt: 'NoirmakStyle, portrait emerging through compression artifacts, erased identity, chromatic aberration, digital noise, atmospheric glow' },
+    { id: 3, numeral: 'III', image: 'redacted-bodies-gen-03.png', prompt: 'NoirmakStyle, queer body emerging from digital bloom, fragmented light, datamosh artifacts, signal reconstruction' },
+    { id: 4, numeral: 'IV', image: 'redacted-bodies-gen-04.png', prompt: 'NoirmakStyle, queer identity indexed as machine archive, glitch blocks, scanline distortion, digital deterioration' },
+    { id: 5, numeral: 'V', image: 'redacted-bodies-gen-05.png', prompt: 'NoirmakStyle, portrait hidden beneath algorithmic masking, signal corruption, chromatic bloom, black background' },
+    { id: 6, numeral: 'VI', image: 'redacted-bodies-gen-06.png', prompt: 'NoirmakStyle, two abstract humanoid forms facing one another, digital duplicate reflections, overlapping signal structures, surreal dialogue, painterly textures' },
+    { id: 7, numeral: 'VII', image: 'redacted-bodies-gen-07.png', prompt: 'NoirmakStyle, body reconstructed from fragmented digital memory, translucent crystalline surfaces, corrupted scanlines, neon cyan and magenta bloom, machine hallucination' },
+    { id: 8, numeral: 'VIII', image: 'redacted-bodies-gen-08.png', prompt: 'NoirmakStyle, radiant human silhouette blooming into crystalline light, fragmented pixels dissolving into organic geometry, RGB split, atmospheric haze' },
+    { id: 9, numeral: 'IX', image: 'redacted-bodies-gen-09.png', prompt: 'NoirmakStyle, luminous skeletal figure assembled from broken transmission fragments, crystalline structure, neon cyan, magenta highlights, black void' },
+    { id: 10, numeral: 'X', image: 'redacted-bodies-gen-10.png', prompt: 'NoirmakStyle, fragmented angelic figure reconstructed from corrupted transmission, glitch sculpture, atmospheric glow' },
+    { id: 11, numeral: 'XI', image: 'redacted-bodies-gen-11.png', prompt: 'NoirmakStyle, surreal digital artwork featuring blooming recursive geometry, atmospheric cyan light, glowing marble textures, abstract computational landscape' },
+    { id: 12, numeral: 'XII', image: 'redacted-bodies-gen-12.png', prompt: 'NoirmakStyle, angelic figure with blue hues, ethereal, emerging from the mist' }
+];
+
 app.set('view engine', 'ejs');
 
 app.use(express.json());
@@ -54,7 +69,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/collection', (req, res) => {
-    res.render('collection');
+    res.render('collection', { gallery: REDACTED_BODIES_GALLERY });
 });
 
 app.get('/contact', (req, res) => {
