@@ -93,7 +93,7 @@
                         <% gallery.forEach((piece, index) => { %>
                         <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= index * 0.08 %>s">
                             <div class="project-card gallery-card <%= galleryAccents[index % 4] %>">
-                                <img src="/images/<%= piece.image %>" alt="Redacted Bodies — generated piece <%= piece.numeral %>" class="gallery-img" width="512" height="512" loading="lazy">
+                                <img src="/images/<%= piece.image %>" alt="Redacted Bodies — generated piece <%= piece.numeral %>" class="gallery-img" width="512" height="512" loading="lazy" data-bs-toggle="modal" data-bs-target="#galleryLightbox" data-numeral="<%= piece.numeral %>" data-prompt="<%= piece.prompt %>">
                                 <p class="gallery-caption">Redacted Bodies — <%= piece.numeral %></p>
                                 <p class="gallery-prompt"><%= piece.prompt %></p>
                             </div>
@@ -103,9 +103,32 @@
                 </div>
             </section><!-- END GALLERY -->
 
+            <!-- GALLERY LIGHTBOX -->
+            <div class="modal fade" id="galleryLightbox" tabindex="-1" aria-labelledby="galleryLightboxLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content lightbox-content">
+                        <div class="modal-header lightbox-header">
+                            <h5 class="modal-title" id="galleryLightboxLabel">Redacted Bodies — <span id="lightboxNumeral"></span></h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body lightbox-body">
+                            <img src="/images/placeholder.png" alt="" id="lightboxImage" class="lightbox-img">
+                            <p class="lightbox-prompt" id="lightboxPrompt"></p>
+                        </div>
+                        <div class="modal-footer lightbox-footer">
+                            <button type="button" class="lightbox-nav-btn" id="lightboxPrev">&larr; Previous</button>
+                            <button type="button" class="lightbox-nav-btn" id="lightboxNext">Next &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END GALLERY LIGHTBOX -->
+
         </main><!-- END MAIN -->
 
         <%- include('footer') %>
+
+        <!-- PAGE-SPECIFIC SCRIPTS -->
+        <script src="/js/collection-lightbox.js"></script>
 
     </body>
 
