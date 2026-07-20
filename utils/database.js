@@ -31,3 +31,10 @@ export async function getProjectById(id) {
     });
     return rows[0] || null;
 }
+
+export async function getAllArtworks() {
+    const [rows] = await pool.query({
+        sql: 'SELECT id, numeral, image_url AS image, prompt FROM artworks ORDER BY id ASC;'
+    });
+    return rows;
+}

@@ -31,7 +31,7 @@ const FALLBACK_PROJECTS = [
     { id: 9, name: 'Lumyn', image: 'noirmak-lumyn-web.jpg', description: 'A web-based generative art platform that uses a fine-tuned language model to create personalized poetry and color metaphors from participant responses celebrating identity, resilience, and inner beauty. The project explores the intersection of AI, creative coding, and interactive storytelling as tools for reflection and emotional connection.', url: 'https://lumyn.noirmak.com/', tags: ['Generative AI', 'Interactive', 'Digital Poetry', 'Creative Technology', 'Web Experience', 'JavaScript', 'Node.js', 'Express.js', 'LLM Integration'] }
 ];
 
-const REDACTED_BODIES_GALLERY = [
+const FALLBACK_GALLERY = [
     { id: 1, numeral: 'I', image: 'redacted-bodies-gen-01.png', prompt: 'NoirmakStyle, digital artwork featuring two luminous classical marble figures surrounded by abstract botanical forms, vibrant cyan and magenta atmosphere, surreal composition, glowing signal traces, textured digital painting, harmonious symmetry, rule of thirds' },
     { id: 2, numeral: 'II', image: 'redacted-bodies-gen-02.png', prompt: 'NoirmakStyle, portrait emerging through compression artifacts, erased identity, chromatic aberration, digital noise, atmospheric glow' },
     { id: 3, numeral: 'III', image: 'redacted-bodies-gen-03.png', prompt: 'NoirmakStyle, queer body emerging from digital bloom, fragmented light, datamosh artifacts, signal reconstruction' },
@@ -68,8 +68,16 @@ app.get('/', async (req, res) => {
     res.render('index', { projectArray, featuredProject });
 });
 
-app.get('/collection', (req, res) => {
-    res.render('collection', { gallery: REDACTED_BODIES_GALLERY });
+app.get('/collection', async (req, res) => {
+    let gallery;
+    try {
+        gallery = await db.getAllArtworks();
+        if (!gallery || gallery.length === 0) gallery = FALLBACK_GALLERY;
+    } catch (e) {
+        console.error('DB query failed, using fallback:', e.message);
+        gallery = FALLBACK_GALLERY;
+    }
+    res.render('collection', { gallery });
 });
 
 app.get('/contact', (req, res) => {
